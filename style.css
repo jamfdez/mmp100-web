@@ -1,6 +1,561 @@
+/* === GOOGLE FONT SETUP === */
+/* Orbitron = header title */
+/* Poppins = headings (h2, h3) */
+/* Roboto = body text */
+
+/* Default font for paragraphs and normal text */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Header title (your name at the top) */
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* Headings (like section titles) */
+h2, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
 img,video{max-width: 100%
     ;height: auto}
 
-body{
-    background-color: aqua;
+
+
+/* ==== GLOBAL FONT + BACKGROUND (HOME PAGE) ==== */
+
+html,
+body {
+  height: 100%;
 }
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* dark blue to purple gradient */
+  background: linear-gradient(135deg, #020617, #1e293b, #4c1d95);
+  color: #f9fafb;
+}
+
+/* keeps the main content from touching screen edges */
+main {
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem 1rem 2rem;
+  background: rgba(15, 23, 42, 0.85); /* dark transparent panel */
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ==== HEADER AREA ==== */
+
+header {
+  text-align: center;          /* center your existing header text */
+  padding: 1.5rem 1rem 0.75rem;
+  color: #f9fafb;
+}
+
+/* if your header has h1 / h2 / p, this will space them nicely */
+header h1,
+header h2,
+header p {
+  margin: 0.25rem 0;
+}
+
+/* ==== NAVIGATION – HORIZONTAL WITH VERTICAL LINES ==== */
+
+nav ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* each page title (Home, Images, Audio, etc.) */
+nav li {
+  position: relative;
+  padding: 0 0.9rem;
+}
+
+/* vertical line between items (not before the first one) */
+nav li + li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.2em;
+  background: rgba(249, 250, 251, 0.45); /* light line */
+}
+
+nav a {
+  text-decoration: none;
+  color: #f9fafb;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+/* if you mark the current page link with class="active" it will pop more */
+nav a.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==== FOOTER ==== */
+
+footer {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+/* ==== AUDIO PAGE (SYMMETRICAL STYLE) ==== */
+
+.audio-top {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.audio-idea-learn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  margin: 2rem auto 3rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .audio-idea-learn {
+    grid-template-columns: 1fr;
+  }
+}
+
+.audio-box {
+  background: rgba(2, 6, 23, 0.85); /* semi-transparent dark card */
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #f9fafb;
+}
+
+/* Title hovering look */
+.audio-subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #020617;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Paragraphs inside each box */
+.audio-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+
+/* Centered audio player below */
+.audio-player {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto 3rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid #1f2937;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+audio {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+/* ==== ANIMATION PAGE STYLES ==== */
+
+.animation-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 850px) {
+  .animation-layout {
+    grid-template-columns: 1.2fr 1fr; /* text left, video right */
+  }
+}
+
+.animation-details {
+  max-width: 600px;
+}
+
+/* Video card */
+.animation-video {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid #1f2937;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+
+.animation-video video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  max-height: 480px;
+}
+
+/* Two side-by-side info boxes */
+.animation-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  margin: 3rem auto 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .animation-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.animation-box {
+  position: relative;
+  background: rgba(2, 6, 23, 0.9);
+  border-radius: 18px;
+  border: 1px solid #1f2937;
+  padding: 2rem 1.5rem 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #f9fafb;
+}
+
+/* Hovering title chip over each paragraph box */
+.animation-subtitle {
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #020617;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.animation-text {
+  margin-top: 1.6rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Extra what-I-learned line at bottom */
+.animation-learn-extra {
+  margin: 1rem auto 3rem;
+  max-width: 800px;
+}
+/* ==== IMAGES PAGE – COMPARISON SHOWCASE ==== */
+
+.images-header {
+  margin-bottom: 2.5rem;
+}
+
+.comparison-grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1150px;
+  margin: 0 auto 3rem;
+}
+
+@media (min-width: 960px) {
+  .comparison-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.comparison-card {
+  background: radial-gradient(circle at top, rgba(34, 197, 94, 0.18), rgba(15, 23, 42, 0.98));
+  border-radius: 20px;
+  border: 1px solid #1f2937;
+  padding: 1.5rem 1.2rem 1.8rem;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.7);
+}
+
+/* Top area: number badge + subtitle */
+.comparison-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #020617;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.image-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Fancy image frame with zoom + tilt */
+.image-frame {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.fancy-frame {
+  padding: 3px;
+  background: linear-gradient(135deg, #22c55e, #38bdf8, #a855f7);
+}
+
+.fancy-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transform-origin: center;
+}
+
+/* Zoom + slight tilt on hover */
+.comparison-card:hover .fancy-frame img {
+  transform: scale(1.12) rotate(-1.5deg);
+  filter: brightness(1.05);
+}
+
+/* Description text */
+.image-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 360px;
+}
+
+/* ==== ABOUT PAGE – PHOTO ABOVE INFO ==== */
+
+.about-layout-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+/* photo frame with hover zoom */
+.about-photo-frame2 {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #22c55e, #38bdf8, #a855f7);
+  padding: 4px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.65);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo-frame2 img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  transition: transform 0.6s ease;
+}
+
+/* cool zoom when hovering */
+.about-photo-frame2:hover img {
+  transform: scale(1.1);
+}
+
+/* floating label "Me" */
+.about-photo-label {
+  position: absolute;
+  top: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(2, 6, 23, 0.9);
+  color: #f9fafb;
+  padding: 0.25rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+/* grid for info boxes */
+.about-info-grid2 {
+  display: grid;
+  gap: 1.3rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .about-info-grid2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-info-card {
+  background: rgba(2, 6, 23, 0.95);
+  border-radius: 18px;
+  border: 1px solid #1f2937;
+  padding: 1.3rem 1.1rem;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-info-card:hover {
+  transform: translateY(-6px);
+  border-color: #22c55e;
+}
+
+.about-info-title {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #22c55e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-info-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+/* ==== SIMPLE HOME PAGE ==== */
+
+.home-simple {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+/* Center intro text */
+.home-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.home-tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #a5b4fc;
+  margin-bottom: 0.4rem;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin: 0 0 0.6rem;
+}
+
+.home-subtitle {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  margin: 0 0 0.4rem;
+}
+
+.home-hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Pills that just show what's on the site */
+.home-pill-section {
+  display: flex;
+  justify-content: center;
+}
+
+.home-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.home-pill {
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: radial-gradient(circle at top, rgba(34, 197, 94, 0.22), rgba(15, 23, 42, 0.96));
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+
