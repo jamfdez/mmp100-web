@@ -1,17 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Hegarty&family=Lilex&display=swap');
 /* === GOOGLE FONT SETUP === */
-/* Orbitron = header title */
-/* Poppins = headings (h2, h3) */
-/* Roboto = body text */
+/* BBH Bartle = header title */
+/* bbh hegarty = headings (h2, h3) */
+/* Lilex = body text */
 
 /* Default font for paragraphs and normal text */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lilex", monospace;
   line-height: 1.6;
 }
 
 /* Header title (your name at the top) */
 header h1 {
-  font-family: "Orbitron", sans-serif;
+font-family: "BBH Bartle", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-weight: 700;
@@ -19,7 +20,7 @@ header h1 {
 
 /* Headings (like section titles) */
 h2, h3 {
-  font-family: "Poppins", sans-serif;
+   font-family: "BBH Hegarty", sans-serif;
   font-weight: 600;
 }
 img,video{max-width: 100%
